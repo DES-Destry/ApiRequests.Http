@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <ImplicitUsings>disable</ImplicitUsings>
+        <Nullable>disable</Nullable>
+        <TargetFrameworks>net45;net472;net48;net6.0;net7.0;netcoreapp3.1;netstandard2.0;netstandard2.1</TargetFrameworks>
+        <PackageIcon>api-interface.png</PackageIcon>
+        <Company>Destry.Unimaster</Company>
+        <AssemblyVersion>1.0.4.0</AssemblyVersion>
+        <FileVersion>1.0.4.0</FileVersion>
+        <Title>Http implementation of ApiRequests</Title>
+        <Description>Base classes and interfaces to build requests via HTTP to external APIs faster.</Description>
+        <Copyright>2023</Copyright>
+        <PackageLicenseUrl>MIT</PackageLicenseUrl>
+        <RepositoryUrl>https://github.com/DES-Destry/ApiRequests.git</RepositoryUrl>
+        <RepositoryType>GitHub</RepositoryType>
+        <PackageTags>API Requests Http</PackageTags>
+        <PackageReleaseNotes>- Add custom configuration setting independ on environment and configuration store also in HttpControllerBuilder.</PackageReleaseNotes>
+        <PackageVersion>1.0.4</PackageVersion>
+        <Authors>Destry.Unimaster</Authors>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+        <DocumentationFile>bin\Release\ApiRequests.Http.xml</DocumentationFile>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Reference Include="System.Net.Http" Condition="'$(TargetFramework)' == 'net45' OR '$(TargetFramework)' == 'net48' OR '$(TargetFramework)' == 'net472'" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="api-interface.png" Pack="true" PackagePath="" />
+    </ItemGroup>
+
+    <ItemGroup Condition=" '$(Configuration)' == 'Debug' ">
+        <!--        There is projects for more detailed debugging. You must download the projects from Github-->
+        <!--        <ProjectReference Include="..\ApiRequests\ApiRequests.csproj"/>-->
+
+        <PackageReference Include="ApiRequests" Version="1.0.5" />
+    </ItemGroup>
+
+    <ItemGroup Condition=" '$(Configuration)' == 'Release' ">
+        <PackageReference Include="ApiRequests" Version="1.0.5" />
+    </ItemGroup>
+
+</Project>
