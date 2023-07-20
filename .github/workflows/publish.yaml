@@ -41,7 +41,9 @@ jobs:
 
       - name: Publish NuGet package
         id: publish
-        run: dotnet nuget push ApiRequests.Http.${RELEASE_VERSION}.nupkg --api-key ${NUGET_TOKEN} --source https://api.nuget.org/v3/index.json
+        run: |
+          ls -al
+          dotnet nuget push ApiRequests.Http.${RELEASE_VERSION}.nupkg --api-key ${NUGET_TOKEN} --source https://api.nuget.org/v3/index.json
         env:
           NUGET_TOKEN: ${{ secrets.NUGET_TOKEN }}
 

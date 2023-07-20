@@ -12,7 +12,7 @@
         <Description>Base classes and interfaces to build requests via HTTP to external APIs faster.</Description>
         <Copyright>2023</Copyright>
         <PackageLicenseUrl>MIT</PackageLicenseUrl>
-        <RepositoryUrl>https://github.com/DES-Destry/ApiRequests.git</RepositoryUrl>
+        <RepositoryUrl>https://github.com/DES-Destry/ApiRequests.Http.git</RepositoryUrl>
         <RepositoryType>GitHub</RepositoryType>
         <PackageTags>API Requests Http</PackageTags>
         <PackageReleaseNotes>- Add custom configuration setting independ on environment and configuration store also in HttpControllerBuilder.</PackageReleaseNotes>
